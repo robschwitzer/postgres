@@ -23,7 +23,7 @@ client.connect((err) => {
     console.log(`Found ${sum} person(s) by the name ${input}:`)
     for (let buddy of result.rows) {
       let birthday = buddy.birthdate.toString()
-      console.log( buddy.first_name, buddy.last_name, 'born', birthday.substring(0,15));
+      console.log( buddy.first_name, buddy.last_name + ',', 'born', birthday.substring(0,15));
     }
     client.end();
   });
